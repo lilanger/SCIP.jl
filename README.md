@@ -21,11 +21,10 @@ Due to breaking changes, only SCIP 8 is supported by the wrapper on version 0.11
 
 ## Update (August 2020)
 
-On MacOS and Linux, it is no longer required to install the [SCIP](https://scipopt.org/) binaries using this package. There now exists a
-[BinaryBuilder.jl](https://github.com/JuliaPackaging/BinaryBuilder.jl) generated
+On MacOS and Linux, it is no longer required to install the [SCIP](https://scipopt.org/) binaries to use this package. There now exists a
+[BinaryBuilder.jl](https://github.com/JuliaPackaging/BinaryBuilder.jl) generating
 package [SCIP_jll.jl](https://github.com/JuliaBinaryWrappers/SCIP_jll.jl) and
-[SCIP_PaPILO_jll.jl](https://github.com/JuliaBinaryWrappers/SCIP_PaPILO_jll.jl) which
-is installed automatically as a dependency.
+[SCIP_PaPILO_jll.jl](https://github.com/JuliaBinaryWrappers/SCIP_PaPILO_jll.jl) automatically as a dependency.
 
 On Windows, the separate installation of SCIP is still mandatory, otherwise,
 you can use this default installation:
@@ -41,7 +40,7 @@ If you use an older Julia version, Windows or want a custom SCIP installation, s
 If you prefer to link to your own installation of SCIP, please set the
 environment variable `SCIPOPTDIR` to point to the **installation path**. That
 is, either `$SCIPOPTDIR/lib/libscip.so`, `$SCIPOPTDIR/lib/libscip.dylib` or
-`$SCIPOPTDIR/bin/scip.dll` should exist, depending on your operating system.
+`$SCIPOPTDIR/bin/libscip.dll` should exist, depending on your operating system.
 
 When this is set before you install this package, it should be recognized
 automatically. Afterwards, you can trigger the build with
